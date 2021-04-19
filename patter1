@@ -1,0 +1,51 @@
+
+Print the following pattern for the given number of rows.
+Pattern for N = 3
+1
+23
+4567
+Input Format :
+N (Total no. of rows)
+Output Format:
+Pattern in N lines
+Constraints :
+1 <= N <= 18
+Sample Input :
+5
+Sample Output :
+1
+23 
+4567
+89123456
+7891234567891234
+Previous
+Next
+
+
+
+
+
+Sol:---------------------------------------->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+public class Solution {
+
+	public static void print(int n) {
+		// Write your code here
+        int num=1;
+        int lim2=1;
+        
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=lim2;j++){
+                System.out.print(num);
+                if(num==9){
+                    num=0;
+                }
+                num++;
+            }
+            lim2=lim2*2;
+            System.out.println();
+        }
+	}
+
+}
